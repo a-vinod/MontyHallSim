@@ -10,6 +10,7 @@
     @return proportion of contestants that win a car
 */
 double simulate_monty_hall(std::size_t trials, bool switch_choice) {
+  srand (time(NULL));
   unsigned long wins = 0;
   for (std::size_t i = 0; i < trials; i++) {
     short car_idx = std::rand() % 3;
